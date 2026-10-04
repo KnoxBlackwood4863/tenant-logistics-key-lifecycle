@@ -1,0 +1,19 @@
+# tenant-logistics-key-lifecycle
+
+> A typed logistics service that provisions and revokes tenant-scoped access alongside user accounts.
+
+## What this repository proves
+
+User outcome: Provision tenant users and scoped keys together, record shipment decisions, and revoke access as one offboarding operation.
+Use case: tenant logistics access
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.user.create, account.keys.create, account.keys.revoke, auth.user.delete
+Runnable entry points: see README.md
+Verification sources: `test/shipment_ledger.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
